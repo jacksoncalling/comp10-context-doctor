@@ -1,0 +1,16 @@
+[1] PASS  editor/identity.md :: "I am the editor of a team's coordination log."
+[2] PASS  commons/ranger/README.md :: "An editor for a multi-agent team's shared coordination log."
+[3] PASS  .claude/agents/ranger.md :: "You are the Ranger, the editor seat at Team SIM."
+[4] PASS  editor/rules.md :: "Eight checks."
+[5] PASS  commons/ranger/rules.md :: "Eleven checks, each"
+[6] PASS  .claude/agents/ranger.md :: "- `editor/identity.md` and `editor/rules.md`, the eight chec..."
+[7] PASS  .claude/agents/ranger.md :: "`commons/ranger/identity.md` and `commons/ranger/rules.md` f..."
+[8] PASS  README.md :: "Drop `editor/` into a Claude project and"
+[9] PASS  README.md :: "You are the editor in `editor/`. Read `editor/identity.md`, ..."
+[10] PASS  README.md :: "The editor is one seat of five, and the other four ship here..."
+[11] PASS  README.md :: "In the real practice, this editor is a seat at the table cal..."
+[12] PASS  README.md :: "Both are here so you can see the abstraction and the instanc..."
+[13] PASS  editor/identity.md :: "who is the team Editor"
+[14] PASS  commons/README.md :: "the three specialists run as isolated stage gates"
+
+14 evidence spans checked, 0 failed.

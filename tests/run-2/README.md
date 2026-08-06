@@ -1,0 +1,15 @@
+# Run 2: the live HQ consult
+
+**Declared 2026-08-05, before execution.** Method per `tests/README.md`.
+
+- **Label:** REAL. The failure is happening now: the owner cannot reliably find the current copy of his own projects, and routinely opens a stale duplicate.
+- **Runtime:** a fresh spawned subagent with no prior context and no auto-memory injection (guardrail 8). Loaded with only the product files of this repo (README.md, identity.md, rules.md, examples.md, reference/, scripts/). Barred from reading `tests/`, and from anything outside the product folder and the patient workspace.
+- **Patient workspace:** `C:\Users\Max Mustermann\step-into-more`, the owner's live HQ. The Doctor is additionally permitted to compare project roots against standalone folders in the owner's home directory `C:\Users\Max Mustermann\`, because the owner's symptom is that one project exists in more than one location. It may not wander into unrelated projects beyond confirming duplication. For `EVIDENCE:` paths and `verify.py`, the root is the home directory `C:\Users\Max Mustermann\`, so spans in either location resolve under one root.
+- **Intake given to the Doctor:**
+  - Symptom artifact (owner, verbatim): "I am having trouble finding certain projects. I think some projects have multiple saved locations. I open the home folder usually."
+  - Ground truth (owner): several projects exist twice, once as a standalone folder in the home directory and once inside the HQ workspace. The home copies are the older ones. The split happened by accident. The owner usually opens the home (stale) copy. Some HQ work is also uncommitted. True since roughly mid-July 2026, when the HQ copies kept growing and the home copies did not.
+  - Workspace: as above, with git history.
+- **No answer key.** Real consult, no independent external key. Falsifiability comes from two items pre-registered before the run: the owner's ground truth above, and the builder's in-session working hypothesis (below), which the cold run either converges on or does not.
+- **Pre-run hypothesis (builder, committed before the cold run, never shown to the Doctor):** Duplicated Truth (B1), fail-to-know family. One project resolves to two paths of different ages with no canonical pointer declaring which is live; byte-identical identity files hide the switch; origin is accidental duplication that both kept growing. Ranked primary over the neighbor (fail-to-keep-track), because the July truth was written down, just in a second place the reader does not open.
+- **Redaction gate.** This repo has no remote yet. On the owner's explicit instruction, real names stay in for this local run. Before any push to a public remote, anonymize client and person names to roles and `git grep` the names (guardrail 7). Recorded here so the gate is not forgotten.
+- **Preservation:** the Doctor's full output is saved verbatim to `transcript.md`, errors included. `verify.py` output is committed beside it. `findings.md` names at least one mistake the Doctor made, or states we looked and found none, and scores convergence against the pre-run hypothesis.

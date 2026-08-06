@@ -1,0 +1,68 @@
+# Examples: diagnoses showing the reasoning
+
+Labels, borrowed discipline: **ILLUSTRATIVE** (constructed to teach, never presented as a real run), **REAL** (an actual consult; receipts live in `tests/` with the transcript kept verbatim). Real runs are referenced here and stored there; the Doctor itself never reads `tests/`.
+
+---
+
+## Example 1 (ILLUSTRATIVE): a bad diagnosis and a good one, same case
+
+**Intake.** Symptom artifact: the assistant told a consultant "the proposal to the training provider is still awaiting a reply; no follow-up needed yet." Ground truth: the contact had replied nine days earlier and the consultant had already met them once since. Workspace: the consultant's practice folder, git-tracked.
+
+### The bad diagnosis (what the Doctor must not produce)
+
+> Your workspace has several problems: the lead file is outdated, your README is very long, there are two files describing your offer, three folders are empty, and your log has no entries for two weeks. You should update the lead file and consider consolidating the offer documents.
+
+Why this fails: it is a symptom inventory plus a prescription. Five findings, no ranking, no cause, and it ends by fixing. The X-Ray data is being presented as a verdict, which is exactly the audit-tool failure. Nothing here explains WHY the wrong answer happened.
+
+### The good diagnosis
+
+**X-Ray walkthrough (excerpted).** 210 files. One entry point. One identity file. State organs: `pipeline/lead-trainingprovider.md` (last touched 2026-06-30), `commons/log.md` (last touched 2026-07-26). Ritual: a wrap-up skill whose definition rewrites only the Current State block of `CLAUDE.md`.
+
+**First differential.** The reply exists in the workspace? Yes: the log entry of 2026-07-22 records the meeting. So the truth was findable, but the assistant read the older version. This is fail-to-keep-track territory with a stratum problem: Family A.
+
+**Trace.**
+1. *Symptom:* "still awaiting a reply; no follow-up needed yet."
+2. *Proximate cause:* EVIDENCE: pipeline/lead-trainingprovider.md :: "Status: Angebot versendet, warte auf Antwort" (last touched 2026-06-30 per git; the reply arrived 2026-07-13).
+3. *Root cause:* the correction entered the system once, in the log (2026-07-22 entry), and never metabolized into the lead file. The wrap-up ritual targets only `CLAUDE.md` Current State; no ritual revisits `pipeline/`. Load order made the stale file win: the session loaded the pipeline file directly because the question was about that lead.
+
+**Classification.** Accretion Without Digest (A2), not Stale Canon (A1): the truth IS in the system, in the wrong stratum. Ruled out A1 via the differential column. Upstream, the ritual gap is structural, so the chain is named: A2, sustained by a write-back path that covers only one file.
+
+**Verdict.** Confirmed diagnosis. Primary cause: Accretion Without Digest. The lead file and the log both answer "what is the state of this lead," and only the log gets fed. Evidence chain above. Stop.
+
+Note what the good diagnosis did NOT do: it did not mention the long README, the empty folders, or anything else visible in the X-Ray that played no role in this failure.
+
+---
+
+## Example 2 (ILLUSTRATIVE): anamnesis to a hypothesis-grade verdict
+
+**Intake.** The owner arrives with a feeling, not an artifact: "the system stopped supporting me; I avoid using it." No symptom output, no ground truth. Two of three intake items missing.
+
+**Anamnesis (excerpted).** The X-Ray shows 14 directories, four untouched in eight weeks, git activity flatlining mid-June while the owner confirms work continued.
+
+- Q: "Which folder do you avoid opening?" A: "The client folder. It feels like it will contradict me."
+- Q: "Where did your last three decisions get made?" A: "In chat sessions, and one on paper."
+- Q: "What do you keep in your head because putting it in the system feels risky?" A: "Pricing changes. Updating them means touching the offer file, two templates, and the site copy."
+
+**Verdict.** Working hypothesis, medium confidence: Habit Bypass (A4), with Expensive Write-Back (A3) as the suspected upstream cause for the pricing class of facts specifically. Reasoning: git flatline plus decisions living outside the system is the A4 signature; the four-touch pricing update is an A3 cost structure, but only one fact class has been examined. **Flip condition:** produce one concrete wrong answer the system gave in the flatline period. If its trace shows the truth was never written anywhere (not even the log), A4 is confirmed as primary. If the truth was logged but unmetabolized, this becomes A2 and the hypothesis dies.
+
+No fix offered. The owner asked "so should I merge the offer files?" and the Doctor declined: the cause is named, change is the owner's.
+
+---
+
+## Example 3 (ILLUSTRATIVE): the quiet case
+
+**Intake.** Symptom: the assistant recommended emailing a contact who had explicitly asked for no email contact. Ground truth: the request was made and the owner remembered logging it. Workspace: git-tracked, complete intake.
+
+**Trace.** The contact's file: EVIDENCE: contacts/m-berger.md :: "Kontakt nur telefonisch, keine E-Mails (ihr Wunsch, 12.05.)". Present, correct, dated before the failure, and on the load path for the session in question (the transcript shows the file was read).
+
+**Verdict.** The workspace is not the cause. Every file the model could read was correct and loaded; the constraint was in context and the session output contradicted it anyway. That is an in-session failure, outside this Doctor's jurisdiction. No workspace finding is manufactured to justify the consult. What IS in scope of this finding: the workspace put the truth in front of the model, which is the whole job the workspace has.
+
+A doctor who finds a disease in every patient is not diagnosing.
+
+---
+
+## Real runs
+
+- **Run A (REAL, pending):** a diagnosis of the builder's own comp 9 competition entry, with the official judge feedback committed as the answer key before the run. See `tests/README.md`.
+- **Run B (REAL, pending):** a consult on the builder's live practice workspace, anonymized to roles.
+- **Run C (REAL, pending):** a consult on a stranger's workspace, with dated consent.

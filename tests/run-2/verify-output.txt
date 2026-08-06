@@ -1,0 +1,21 @@
+# NOTE: verify.py was run against the real, un-mapped workspace and returned 13/13, exit 0.
+# For the public repo, third-party names in the spans below are mapped to roles to match
+# the anonymized transcript (see transcript.md "Anonymization note"). Because the paths are
+# masked, re-running verify.py on this file against any workspace will not reproduce the pass;
+# the original verification happened before masking, against the real files.
+
+[1] PASS  prospect-a/CLAUDE.md :: "## Current State (2026-05-05)"
+[2] PASS  prospect-a/CLAUDE.md :: "**Status:** First discovery call completed (30 min with CEO)"
+[3] PASS  prospect-a/CLAUDE.md :: "Creating an interactive HTML "
+[4] PASS  step-into-more/business-dev/pipeline/prospect-a/lead.md :: "**Angelegt:** 2026-07-12"
+[5] PASS  step-into-more/business-dev/pipeline/prospect-a/lead.md :: "kein Produkt, kein CEO-Pitch. Eintritt über die Menschen, di..."
+[6] PASS  step-into-more/CLAUDE.md :: "warm über eigene Kursteilnahme KI-Manager/IHK 12-2025, Wiede..."
+[7] PASS  partner-l/CLAUDE.md :: "# ⚠️ partner-l — AUFGELÖST (2026-07-20)"
+[8] PASS  partner-l/CLAUDE.md :: "**Hier nicht mehr weiterarbeiten.** Neue Zuhause:"
+[9] PASS  partner-l/CLAUDE.md :: "**Beratungs-HQ:** `~/step-into-more/CLAUDE.md` · **Kunde/Kol..."
+[10] PASS  step-into-more/CLAUDE.md :: "| Work on partner-l (partner/collaborator) | `clients/partner-l..."
+[11] PASS  first-client-coach/README.md :: "Built for **Weekly Comp #8 (The Wildcard)** as a capstone. I..."
+[12] PASS  step-into-more/first-client-coach/reference/pattern-ledger.md :: "**2026-07-19** — Josh named, unprompted, that he has never p..."
+[13] PASS  step-into-more/CLAUDE.md :: "| Be coached toward the first client | `first-client-coach/`..."
+
+13 evidence spans checked, 0 failed.
