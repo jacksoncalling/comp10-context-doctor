@@ -6,6 +6,12 @@ It diagnoses one thing: why a folder-based AI workspace that used to give good a
 
 **Watch the demo:** https://youtu.be/3X9Ed_CMAPs
 
+## Folder systems are grown, not built
+
+A folder system is alive. You start with a need and a rough idea of how to meet it, you build the folders, and then reality shows you where the thinking was thin. So you adapt. It grows with the work, organically, the way real systems in real organizations grow. Nobody gets to stand outside their own system and one-shot a perfect one.
+
+So the real work was never the first build. It is keeping the system in tune with the need and the world as both keep moving. That is the job this tool exists to support.
+
 ## The failure it works backward from
 
 You built a folder system (a Claude project, an ICM workspace, a "second brain") so an AI assistant could work inside your world. It worked. Then one day:

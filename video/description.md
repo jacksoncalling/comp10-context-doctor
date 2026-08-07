@@ -2,20 +2,24 @@
 
 Video: https://youtu.be/3X9Ed_CMAPs
 
+Title: Folder systems are grown, not built
+
 ## Description (primary)
 
-The Context Doctor diagnoses why a folder-based AI workspace that used to give good answers starts giving wrong, stale, or generic ones.
+A folder system is alive. You start with a need and a rough idea of how to meet it, you build the folders, and then reality shows you where the thinking was thin. So you adapt. It grows with the work, organically, the way real systems in real organizations grow. Nobody gets to stand outside their own system and one-shot a perfect one.
 
-Drop it into a Claude project and it takes a plain X-ray of your folders, traces the wrong answer back to the exact line that caused it, names one structural cause, and stops. It does not hand you the fix. Naming the cause is the treatment, and it keeps you in the loop instead of approving a change you no longer hold.
+So the real work is not the first build. It is keeping the thing in tune with the need and the world as both keep moving.
 
-One folder, one identity, no sprawl of agents. Pointed at my own live workspace, cold, it named a cause I had stopped seeing and disagreed with me about what it was. It was right.
+The Context Doctor is my attempt to help with that. It does not rewrite your system. It diagnoses why it drifted: it images the folders, traces a wrong answer to the line that caused it, names one structural cause, and stops. A loop that keeps refining and keeps you in the loop, so the system stays in contact between facts, meanings, values, and action.
+
+Drop it into any Claude project.
 
 Repo: https://github.com/jacksoncalling/comp10-context-doctor
 
-With thanks to Stafford Beer (the purpose of a system is what it does), Bonnitta Roy (the human-recursion loop, AuditEdit, FAST), and Kyle Bird (analytical vs operational context).
+With thanks to Bonnitta Roy, Stafford Beer, and Kyle Bird, whose thinking this leans on. Not the only cosmology that could hold a tool like this, just the one I reached for.
 
 ## Shorter version (for the box)
 
-Why did my AI workspace start lying to me? The Context Doctor takes an X-ray of your folder system, traces the wrong answer to the exact line that caused it, names one structural cause, and stops. It never hands you the fix, so you stay in the loop. A drop-in folder system for any Claude project.
+Folder systems are grown, not built. You meet a need, you guess at a structure, then reality shows you the flaws and you adapt. The real work is keeping the system in tune with the need and the world. The Context Doctor helps: it diagnoses why your folders drifted, names one cause, and stops, so the refining stays yours.
 
 https://github.com/jacksoncalling/comp10-context-doctor
