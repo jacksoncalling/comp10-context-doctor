@@ -75,6 +75,32 @@ Rule out the mechanical neighbors: this is not Duplicated Truth (B1), because th
 
 ---
 
+## Example 5 (REAL): the job-application system
+
+Condensed from the verbatim cold-run receipt in `tests/run-3/` (11 of 11 evidence spans verified; names mapped to roles). A real consult on an ordinary, non-meta workspace.
+
+**Intake.** Symptom: "The HR Screener and Team Lead specialists approve my package, but my real applications rarely get past the first-round screen. The cover letters also often do not match my tone." Ground truth: across June to August 2026, most applications were rejected at or before round one, despite internal approval. Workspace: a job-application folder, no git (timeline instrument: mtimes, the weaker one).
+
+**X-Ray (excerpted).** One entry point, three specialists (Tailor, HR Screener, Team Lead), eight application cycles in `build/`. The automated heuristic finds zero state organs; by hand, exactly one `OUTCOME.md` exists, for the single interview, out of eight applications. `specialists/reference/winning-patterns.md`, the file both critics name as their calibration, sits untouched since 2026-06-15, the day the system was built.
+
+**Step 2b.** Purpose: move an application from draft to sent. The structure (one folder per application, build then critique then output) fits that bounded workflow. Mechanical, not an altitude mismatch.
+
+**First differential.** The system built a place to know the outcome: an `OUTCOME.md` template and a `/compound` step that feeds the calibration file. The world then moved and the write-back never happened. Fail to keep track, Family A.
+
+**Trace.**
+1. *Symptom:* internal approval, real rejection.
+2. *Proximate cause:* both critics calibrate against one file, and that file is frozen and self-contradicting.
+   EVIDENCE: specialists/hr-screener/identity.md :: "what actually got owner interviews vs. filtered."
+   EVIDENCE: specialists/reference/winning-patterns.md :: "silence ≈ rejection."
+   Two applications have been silent for six and seven weeks. By the file's own rule those are rejections; neither is recorded anywhere.
+3. *Root cause:* the write-back ritual exists but requires a deliberate session nothing triggers, and it ran once, for the win. Wins have a trigger (a call); rejections and silence have none, so only good news ever updates the calibration.
+
+**Classification.** A3 Expensive Write-Back, primary, manifesting as A1 Stale Canon in the calibration file. Ruled out A2 (the outcomes were never written anywhere, not misplaced) and A4 (the folder was actively used across eight cycles, not bypassed). Secondary, working hypothesis: C1 Unanchored Claim Hardening on the Tailor's "authentic voice," which has no real writing sample to check against.
+
+**Verdict.** Confirmed diagnosis. The reviewers' approval carries no information about real outcomes, because the file they calibrate against has been disconnected from real results since day one. The Doctor named it and stopped; building the outcome loop is the owner's. Full receipt and verifier output in `tests/run-3/`.
+
+---
+
 ## Real runs
 
 - **Run 1 (REAL, executed and passed):** a cold diagnosis of the builder's own comp 9 entry, scored against the judges' feedback committed as an answer key before the run. It reached both expected causes. Receipts in `tests/run-1/`.
