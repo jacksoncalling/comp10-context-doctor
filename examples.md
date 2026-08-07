@@ -79,4 +79,4 @@ Rule out the mechanical neighbors: this is not Duplicated Truth (B1), because th
 
 - **Run 1 (REAL, executed and passed):** a cold diagnosis of the builder's own comp 9 entry, scored against the judges' feedback committed as an answer key before the run. It reached both expected causes. Receipts in `tests/run-1/`.
 - **Run 2 (REAL, executed and passed):** a cold consult on the builder's live workspace, anonymized to roles. 13 of 13 evidence spans verified, and it diverged from the builder's pre-registered hypothesis to a better-argued primary cause. Receipts in `tests/run-2/`.
-- **Run 3 (REAL, pending):** a consult on a stranger's workspace, with dated consent.
+- **Run 3 (REAL, executed and passed):** a cold consult on the builder's job-application system, an ordinary non-meta domain. The reviewers approve packages that reality rejects; the Doctor traced it to a calibration file frozen since the system was built, and named A3 (Expensive Write-Back). 11 of 11 evidence spans verified, anonymized to roles. Receipts in `tests/run-3/`.

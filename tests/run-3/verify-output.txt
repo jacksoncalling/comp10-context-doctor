@@ -1,0 +1,15 @@
+# names mapped to roles post-run; verify.py returned 11/11 against the real workspace before mapping
+
+[1] PASS  specialists/hr-screener/identity.md :: "`../reference/winning-patterns.md` — what actually got owner ..."
+[2] PASS  specialists/team-lead/identity.md :: "`../reference/winning-patterns.md`."
+[3] PASS  specialists/reference/winning-patterns.md :: "Grounding research for the HR Screener + Team Lead personas...."
+[4] PASS  specialists/reference/winning-patterns.md :: "**10 application packages owner confirmed led to interviews**..."
+[5] PASS  specialists/reference/winning-patterns.md :: "a good package got a response within a couple of days; silen..."
+[6] PASS  CLAUDE.md :: "**employer-b** (KI-Manager REQ) — ✅ COMPLETE. Sent 18.06.2026."
+[7] PASS  CLAUDE.md :: "**employer-c** (Product Owner PIM) — ✅ SENT 25.06.2026."
+[8] PASS  output/2026-07-23_employer-f-technologietransfer-manager/OUTCOME.md :: "`/compound` this into `specialists/reference/winning-pattern..."
+[9] PASS  CLAUDE.md :: "`/compound` outcomes (employer-f pre-call lever + any employer-h/..."
+[10] PASS  specialists/tailor/identity.md :: "You write in owner's authentic voice: whole-systems, craftsma..."
+[11] PASS  research/storybank.md :: "not bullet points, but the *story behind* the bullet. The Ta..."
+
+11 evidence spans checked, 0 failed.

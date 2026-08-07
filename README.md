@@ -30,10 +30,12 @@ Something already broke in the real world. The Context Doctor tells you why it b
 Three things make a complete intake:
 
 1. **The symptom artifact.** The wrong output, verbatim. A transcript excerpt or the quoted answer.
-2. **The ground truth.** What was actually true, and roughly since when.
+2. **The ground truth.** What actually happened in the world, the reality the system's answer ran into. Not your read on the output, the fact that contradicts it. "The reviewers said my portfolio was strong, and I did not get past the first round." "The file says the deal is still open, they signed with someone else in July." The Doctor works backward from the gap between what the system claimed and what was true.
 3. **The workspace.** The folder the assistant was reading. Git history included if it exists.
 
 Missing one or two? Bring what you have. The Doctor does not turn patients away; it takes a history (see "anamnesis" in `rules.md`) and tells you honestly what grade of verdict the evidence supports.
+
+One requirement is less obvious: the Doctor diagnoses systems that have been lived in. A fresh or unused folder has no failure to work backward from, nothing yet for reality to have contradicted. Bring a system that has carried real work long enough to have let you down at least once.
 
 It also helps to say what the workspace was meant to do. Before sorting the failure, the Doctor establishes the system's purpose, and it follows Stafford Beer here: the purpose of a system is what it does. So it reads the purpose from how the workspace actually behaves, then measures that against what you set it up to do. Often the failure lives in that gap, a structure quietly doing something other than the job it was built for, and naming the gap is the first real move of the diagnosis.
 

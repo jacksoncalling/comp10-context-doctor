@@ -21,7 +21,7 @@ Everything outside `tests/` is the product. Everything inside `tests/` is eviden
 |---|---|---|---|
 | run-1 | The builder's own comp 9 competition repo (`comp9-editor`), symptom: "judges could not tell what the entry point was; the build read as three specialists where one was asked for" | **executed 2026-08-04, passed** (see `run-1/findings.md`) | The official judge feedback, committed before the run. It names the causes independently; the run tests whether the Doctor finds them without seeing it. |
 | run-2 | The builder's live HQ (`step-into-more`), symptom: "I can't find certain projects; some have multiple saved locations; I open the home folder usually" | **executed 2026-08-05, passed** (see `run-2/findings.md`) | None (real consult). Falsifiability via a pre-committed builder hypothesis; the cold run diverged from it and named a better-argued primary (B3 over B1). Real names retained locally per owner; redaction gate before any public push. |
-| run-3 | A stranger's workspace, one wrong answer it gave them, consent dated and noted in the run folder | pending | None (real consult) |
+| run-3 | The builder's job-application system (an ordinary non-meta domain), symptom: "my internal HR and team-lead reviewers approve the package, but real applications get rejected at the first round" | **executed 2026-08-07, passed** (see `run-3/findings.md`) | None (real consult). Pre-committed builder hypothesis; the cold run converged and sharpened it (A3 Expensive Write-Back, not "no organ"). 11/11 verified. Anonymized to roles before commit. |
 
 ## Labels
 
