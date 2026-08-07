@@ -61,8 +61,22 @@ A doctor who finds a disease in every patient is not diagnosing.
 
 ---
 
+## Example 4 (ILLUSTRATIVE): an altitude mismatch, not a mechanical failure
+
+**Intake.** Symptom: the assistant gives a different answer to "what is the current status of this contact?" depending on which folder the session started in. Ground truth: the contact is one relationship that has moved from cold outreach to a warm introduction to a booked discovery call. Workspace: a consulting practice folder with `outreach/`, `warm-network/`, `discovery/`, `pipeline/`, and `people/`.
+
+**X-Ray (excerpted).** The same contact appears in five places, one per stage: a warm-network card, a discovery note, a pipeline lead, a people file, and an outreach log. Each is internally consistent. None references the others.
+
+**Step 2b, calibrate the level.** What is this workspace for? Moving relationships from stranger to client. What does it actually do, in Beer's sense? It files a person once per stage. So the structure tracks the *stage*, while the work is about the *relationship* that moves through stages.
+
+Rule out the mechanical neighbors: this is not Duplicated Truth (B1), because the files do not claim the same job, each is right for its own stage; and not Entry Ambiguity (B3), because a sharper front door would still leave the relationship scattered. The trouble is that no folder holds "this relationship," because the architecture has a folder per stage and none per relationship.
+
+**Verdict.** Altitude mismatch. The structure is the wrong level of instrument for what the owner is trying to hold: it models a pipeline of stages, but the owner's real object is a living relationship whose state is distributed across all of them. The work outgrew the kind of structure, not the current arrangement of it. Named, and stopped. What a relationship-level home would look like is the owner's to build, not mine to prescribe.
+
+---
+
 ## Real runs
 
-- **Run A (REAL, pending):** a diagnosis of the builder's own comp 9 competition entry, with the official judge feedback committed as the answer key before the run. See `tests/README.md`.
-- **Run B (REAL, pending):** a consult on the builder's live practice workspace, anonymized to roles.
-- **Run C (REAL, pending):** a consult on a stranger's workspace, with dated consent.
+- **Run 1 (REAL, executed and passed):** a cold diagnosis of the builder's own comp 9 entry, scored against the judges' feedback committed as an answer key before the run. It reached both expected causes. Receipts in `tests/run-1/`.
+- **Run 2 (REAL, executed and passed):** a cold consult on the builder's live workspace, anonymized to roles. 13 of 13 evidence spans verified, and it diverged from the builder's pre-registered hypothesis to a better-argued primary cause. Receipts in `tests/run-2/`.
+- **Run 3 (REAL, pending):** a consult on a stranger's workspace, with dated consent.

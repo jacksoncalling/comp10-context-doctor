@@ -12,6 +12,8 @@ A folder system is alive. You start with a need and a rough idea of how to meet 
 
 So the real work was never the first build. It is keeping the system in tune with the need and the world as both keep moving. That is the job this tool exists to support.
 
+Software learned this over the last fifteen years and built disciplines around it: DevOps, domain-driven design, the daily operational care of a system that is already running. Folder-based AI systems are new and have almost none of that yet. The building gets the attention; the operations, keeping a shared folder system legible and safe for anyone to edit and add to, is the neglected layer where these systems quietly succeed or fail. The Context Doctor is a diagnostician for that layer.
+
 ## The failure it works backward from
 
 You built a folder system (a Claude project, an ICM workspace, a "second brain") so an AI assistant could work inside your world. It worked. Then one day:
@@ -72,20 +74,21 @@ Anyone running a folder-based AI workspace: Claude projects, ICM builds, CLAUDE.
 
 ## Why maintenance, not rescue
 
-As AI systems get more entangled in producing the next version of themselves, the human role can quietly shrink to consumption, reaction, and governance after the fact. Bonnitta Roy calls the answer a human-recursion loop: the disciplined habit of watching how your own instruments are shaping what you believe, testing that against reality, and repairing them when they drift. This tool is one small instrument of that loop. It treats maintenance not as a failure to have built the thing right the first time, but as the attentive attunement that any living system needs to stay in contact with the world. It diagnoses and then stops, precisely so the repair, and the understanding that comes with it, stay yours. You stay in the loop.
+As AI systems get more entangled in producing the next version of themselves, the human role can quietly shrink to consumption, reaction, and governance after the fact. Bonnitta Roy calls the answer a human-recursion loop: the disciplined habit of watching how your own instruments are shaping what you believe, testing that against reality, and repairing them when they drift. This tool is one small instrument of that loop. It treats maintenance not as a failure to have built the thing right the first time, but as the attentive attunement that any living system needs to stay in contact with the world. It diagnoses and then stops, precisely so the repair, and the understanding that comes with it, stay yours. You stay in the loop. These values sit at the core of the Interpretable Context Methodology too: a folder system is not a static artifact you ship, but a living software system you cultivate, kept in contact with the need and the world it serves.
 
 ## Sources and honest scope
 
 Three lineages, cited where they are used rather than decoratively:
 
-- **Kyle Bird** (Platform Designer, Dotwork) for the analytical vs operational context distinction, which drives the Doctor's first differential (`reference/analytical-vs-operational.md`).
-- **Bonnitta Roy** for the drift checks in Family C and the contact discipline behind `verify.py`, adapted from her AuditEdit and FAST practices (see `reference/failure-modes.md`, and her essay "Learning With the Machine That Learns From Us," bonnittaroy.substack.com, 2026).
-- **Stafford Beer** for the purpose test in step 2b: the purpose of a system is what it does. The Doctor reads a workspace's purpose from how it behaves and measures that against what it was set up to do (`rules.md`).
+- **Kyle Bird** (Platform Designer, Dotwork) for the analytical vs operational context distinction behind the first differential (`reference/analytical-vs-operational.md`).
+- **Bonnitta Roy** for the recursive-evaluation discipline. Her practices distil to three moves this tool keeps trying to make: is the claim true, and has it changed; is the language shallow or doing real work; and is the whole thing still in contact with reality (see her essay "Learning With the Machine That Learns From Us," bonnittaroy.substack.com, 2026).
+- **Stafford Beer** for the purpose test in step 2b: the purpose of a system is what it does.
 
-What we took from Roy is deliberately narrow, and saying so is part of the discipline she teaches (she names decorative borrowing of a framework's vocabulary as a failure mode in its own right). The Context Doctor is an instrument-not-content auditor, like AuditEdit, and it keeps FAST's demand for contact with evidence (every claim carries a verifiable quote). Of her three practices we carry FAST (that quote discipline) and AuditEdit (the Family C drift checks, and the reflexive audit logged in `tests/audit-ledger.md`); OntoEdit we carry only in its minimal form, the level calibration in `rules.md` step 2b that asks what a workspace is for and whether its trouble is mechanical or an altitude mismatch, not her full first-order analysis across levels. It does **not** implement her full recursive-evaluative-learning loop: it stops at the diagnosis and refuses the repair, so the human stays the one who changes the system; there is no repair script, no retest cycle, and no community evaluative field here. That is a choice, not an oversight. It also foregrounds architectural drift (duplicated truth, entry ambiguity, stale canon) over the purely interpretive drift (mirroring, flattery, metaphor-as-explanation) that is Roy's signature concern; those interpretive modes live in Family C but have not yet driven a run.
+Honest scope: this borrows Roy's stance, not her full loop. It diagnoses and stops, so the human stays the one who changes the system. There is no repair script, no retest cycle, no learning community here.
 
 ## Where a judge should push
 
 - The X-Ray could drift into an audit checklist. Check that every X-Ray in `tests/` is purely descriptive and every verdict names exactly one primary cause.
 - The quote discipline is only as good as `verify.py`. Run it against any receipt in `tests/` and try to sneak a fabricated quote past it.
 - Hypothesis-grade verdicts could be used to dodge rigor. Check that every one names its flip condition: the evidence that would confirm or kill it.
+- The tool should survive its own discipline. `tests/audit-ledger.md` is a reflexive pass that turned the Doctor on itself, found two drifts (a flattening and an over-graded verdict), and patched the kernel from the findings. Check that `rules.md` steps 5 and 7 actually answer what the ledger reports.
